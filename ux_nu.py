@@ -5,10 +5,12 @@ import urllib
 import json
 import sys
 
+
 def Shortened(site):
     url = "http://ux.nu/api/short?"
     short = urllib.urlopen(url + urllib.urlencode({"url": site})).read()
     return json.loads(short)
+
 
 def Expanded(site):
     url = "http://ux.nu/api/expand?"
