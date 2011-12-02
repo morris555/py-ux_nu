@@ -23,7 +23,7 @@ if __name__ == '__main__':
     else:
         site = sys.argv[1]
 
-    if site[7:12] == "ux.nu":
+    if site[:12] == "http://ux.nu":
         try:
             print(Expanded(site)["data"]["exp"])
         except KeyError:
